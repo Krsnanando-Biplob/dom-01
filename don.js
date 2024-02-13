@@ -102,4 +102,6 @@ function EllipseArea(){
  EllipseSpan.innerText= AreaEllipse;
 }
 
-  
+function alartF(){
+  console.a
+}

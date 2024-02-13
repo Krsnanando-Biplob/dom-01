@@ -1,12 +1,20 @@
 #movableElement{
- height: 50px;
- width: 50px;
+ height: 65px;
+ width: 65px;
  border-radius: 100%;
- background-color: green;
+ background-color: rgb(124, 127, 124);
  position: absolute;
+ padding: 3px;
  z-index: 22;
 }
 #movableElement:hover{
-background-color: red;
+background-color: rgb(198, 68, 68);
 border-radius: 0;
+font: bolder;
+height: 70px;
+width: 70px;
+margin: 0px;
+
 }
+
+ 
