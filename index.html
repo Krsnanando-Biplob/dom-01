@@ -4,11 +4,14 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>DOM</title>
+ <link rel="stylesheet" href="./style.css">
  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.3/dist/full.min.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="m-8">
- <header></header>
+ <header>    
+  <div id="movableElement"></div>
+ </header>
  <main>
   <section>
    <!-- shape container -->
@@ -150,6 +153,38 @@
       <h2 class="text-3xl underline hover:underline-offset-4">Area Calculation</h2>
     </div>
    </div>
+  </section>
+  <section>
+
+<script>
+  const movableElement = document.getElementById('movableElement');
+  let isMouseDown = false;
+
+  let offsetX, offsetY;
+
+  movableElement.addEventListener('mousedown', function (e) {
+    isMouseDown = true;
+
+    // Calculate the offset from the mouse pointer to the top-left corner of the element
+    offsetX = e.clientX - movableElement.getBoundingClientRect().left;
+    offsetY = e.clientY - movableElement.getBoundingClientRect().top;
+  });
+
+  document.addEventListener('mousemove', function (e) {
+    if (isMouseDown) {
+      // Move the element based on the mouse position
+      const newX = e.clientX - offsetX;
+      const newY = e.clientY - offsetY;
+
+      movableElement.style.left = `${newX}px`;
+      movableElement.style.top = `${newY}px`;
+    }
+  });
+
+  document.addEventListener('mouseup', function () {
+    isMouseDown = false;
+  });
+</script>
   </section>
  </main>
  <script src="./don.js"></script>

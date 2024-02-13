@@ -101,3 +101,5 @@ function EllipseArea(){
  const EllipseSpan= document.getElementById('Ellipse-span');
  EllipseSpan.innerText= AreaEllipse;
 }
+
+  
