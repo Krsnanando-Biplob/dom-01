@@ -103,5 +103,5 @@ function EllipseArea(){
 }
 
 function alartF(){
-  console.a
+  alert('sorry to say that you are hacked')
 }
